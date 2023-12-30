@@ -1,6 +1,6 @@
 Certainly, let's delve deeper into the file, remote-exec, and local-exec provisioners in Terraform, along with examples for each.
 
-file Provisioner:
+# 1. file Provisioner:
 
 The file provisioner is used to copy files or directories from the local machine to a remote machine. This is useful for deploying configuration files, scripts, or other assets to a provisioned instance.
 
@@ -22,7 +22,7 @@ provisioner "file" {
 }
 In this example, the file provisioner copies the localfile.txt from the local machine to the /path/on/remote/instance/file.txt location on the AWS EC2 instance using an SSH connection.
 
-remote-exec Provisioner:
+# 2. remote-exec Provisioner:
 
 The remote-exec provisioner is used to run scripts or commands on a remote machine over SSH or WinRM connections. It's often used to configure or install software on provisioned instances.
 
@@ -49,7 +49,7 @@ provisioner "remote-exec" {
 }
 In this example, the remote-exec provisioner connects to the AWS EC2 instance using SSH and runs a series of commands to update the package repositories, install Apache HTTP Server, and start the HTTP server.
 
-local-exec Provisioner:
+# 3. local-exec Provisioner:
 
 The local-exec provisioner is used to run scripts or commands locally on the machine where Terraform is executed. It is useful for tasks that don't require remote execution, such as initializing a local database or configuring local resources.
 
